@@ -417,6 +417,11 @@ nav .fa-solid{
     }
 
     @media only screen and (max-width: 375px) {
+    nav {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    
     #header {
         background-position: 0 100px;
     }   
