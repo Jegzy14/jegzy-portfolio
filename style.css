@@ -20,7 +20,7 @@ body{
     background-position: 350px 50px;
 }
 .container{
-    padding: 10px 10%;
+    padding: 10px 10% 10%;
 }
 nav{
     display: flex;
@@ -28,18 +28,16 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
-    width: 140px;
-}
 nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: #c7c7c7;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+    letter-spacing: 2px;
     position: relative;
 }
 nav ul li a::after{
@@ -56,11 +54,14 @@ nav ul li a:hover::after{
     width: 100%;
 } 
 .header-text{
-    margin-top: 30%;
-    font-size: 30px;
+    color: #c7c7c7;
+    margin-top: 15%;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 .header-text h1{
     font-size: 60px;
+    letter-spacing: 2px;
     margin-top: 20px;
 }
 .header-text h1 span{
@@ -70,6 +71,7 @@ nav ul li a:hover::after{
 #about{
     padding: 80px 0;
     color: #ababab;
+    letter-spacing: 1.2px;
 }
 .row{
     display: flex;
@@ -84,8 +86,11 @@ nav ul li a:hover::after{
     border-radius: 15px; 
 }
 .about-2{
-    margin-top: 12.5%;
+    margin-top: 1%;
     flex-basis: 60%;
+}
+.about-2 h1{
+    padding-bottom: 10px;
 }
 .sub-title{
     font-size: 60px;
@@ -142,6 +147,7 @@ nav ul li a:hover::after{
 }
 .services-list div{
     background: #262626;
+    color: #b6b6b6;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -157,22 +163,22 @@ nav ul li a:hover::after{
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
 .services-list div:hover{
     background: #ff004f;
     transform: translateY(-10px);
 }
+
 /* ------------------Porfolio---------------------- */
 #portfolio{
     padding: 50px 0;
 }
+.sub-title {
+    font-size: 70px;
+    font-weight: 600;
+    color: #a2a2a2;
+}
 .work-list{
+    color: #dfdfdf;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
@@ -187,7 +193,8 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
 }
 .layer{
     width: 100%;
@@ -224,7 +231,8 @@ nav ul li a:hover::after{
     text-align: center;     
 }
 .work:hover img{
-    transform: scale(1.1);
+    transform: scale(1.15);
+    opacity: 0.5;
 }
 .work:hover .layer{
     height: 100%;
@@ -251,8 +259,14 @@ nav ul li a:hover::after{
 .contact-right{
     flex-basis: 60%;
 }
+.contact-left h1{
+    color:#a2a2a2;
+    font-size: 52px;
+    margin-top: 10px;
+}
 .contact-left p{
-    margin-top: 30px;
+    color:#a2a2a2;
+    margin-top: 20px;
 }
 .contact-left p i{
     color: #ff004f;
@@ -276,6 +290,7 @@ nav ul li a:hover::after{
 }
 .btn.btn2{
     display: inline-block;
+    color: #bbbbbb;
     background: #ff004f;
 }
 .contact-right form{
@@ -303,25 +318,48 @@ form .btn2{
     text-align: center;
     padding: 25px 0;
     background: #262626;
+    color: #ababab;
     font-weight: 300;
     margin-top: 20px;
 }
 .copyright i{
     color: #ff004f;
 }
+.whats-app {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 40px;
+    right: 15px;
+    background-color: #ff004f;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    z-index: 100;
+}
+.whats-app i{
+    color: #000;
+    padding-top: 7px;
+    padding-left: 2px;
+}
 /* ----------------CSS for small screens--------------------- */
 nav .fa-solid{
     display: none;
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 1000px){
     nav {
         margin-top: 20px;
         margin-left: 100px;
     }
 
     #header {
-        background-position: 1500px 100px;
+        background-position: -480px 260px;
+    }
+
+    .header-text {
+        margin-top: 20%;
     }
 
     nav .fa-solid{
@@ -354,16 +392,20 @@ nav .fa-solid{
         display: block;
     }
 
+    .social-icons {
+        margin-bottom: 30px;
+    }
+
 }
 
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/background\ 02.jpg);
-        background-position: 800px 100px;
+        background-position: 800px 150px;
     }
     .header-text{
-        margin-top: 10%;
-        font-size: 18px;
+        margin-top: 20%;
+        font-size: 10.5px;
     }
     .header-text h1{
         font-size: 30px;
@@ -416,19 +458,42 @@ nav .fa-solid{
         font-size: 14px;
     }
 
-    @media only screen and (max-width: 375px) {
+    .social-icons {
+        margin-bottom: 30px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 399px) {
     nav {
         margin-top: 20px;
-        margin-left: 1px;
+        margin-left: 0px;
     }
     
     #header {
         background-position: 0 100px;
-    }   
+    }
 
+    .contact-left h1 {
+        font-size: 47px;
+    }
 
-    
+    .social-icons {
+        margin-bottom: 30px;
+    }
 
+    .whats-app {
+        width: 48px;
+        height: 48px;
+    }
+
+    .whats-app i {
+        width: 10px;
+        height: 10px;
+        padding-top: 3.5px;
+        padding-right: 36px;
+    }
 }
 
 #msg{
