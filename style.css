@@ -147,7 +147,7 @@ nav ul li a:hover::after{
 }
 .services-list div{
     background: #262626;
-    color: #b6b6b6;
+    color: #fff;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -164,7 +164,7 @@ nav ul li a:hover::after{
     margin-bottom: 15px;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #F16490;
     transform: translateY(-10px);
 }
 
